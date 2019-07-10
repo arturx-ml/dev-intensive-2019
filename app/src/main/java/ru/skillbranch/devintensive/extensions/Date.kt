@@ -30,7 +30,9 @@ fun Date.add(value: Int, unit: TimeUnits = TimeUnits.SECOND): Date {
 }
 
 fun Date.humanizeDiff(date: Date = Date()): String {
-    return SimpleDateFormat("HH:mm:ss dd.MM.yy", Locale("ru")).format(date)
+    val current = Date()
+    return ""
+//    val diff =
 }
 
 enum class TimeUnits {
