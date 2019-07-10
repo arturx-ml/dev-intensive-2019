@@ -20,7 +20,7 @@ fun Date.add(value: Int, unit: TimeUnits = TimeUnits.SECOND): Date {
     time += when (unit) {
         TimeUnits.SECOND -> value * SECOND
         TimeUnits.MINUTE -> value * MINUTE
-        TimeUnits.HOUR-> value * HOUR
+        TimeUnits.HOUR -> value * HOUR
         TimeUnits.DAY -> value * DAY
         else -> throw IllegalStateException("invalid unit")
     }
@@ -29,9 +29,9 @@ fun Date.add(value: Int, unit: TimeUnits = TimeUnits.SECOND): Date {
     return this
 }
 
-//fun Date.humanizeDiff(date: Date = Date()): String {
-//
-//}
+fun Date.humanizeDiff(date: Date = Date()): String {
+    return SimpleDateFormat("HH:mm:ss dd.MM.yy", Locale("ru")).format(date)
+}
 
 enum class TimeUnits {
     SECOND,
